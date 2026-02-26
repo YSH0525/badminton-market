@@ -180,7 +180,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { icon: '🏆', title: '전문 코치 운영', desc: '국가대표 출신 코치가 직접 운영하며 장비를 추천합니다' },
+              { icon: '🏆', title: '전문 코치 운영', desc: '선수 출신 코치가 직접 운영하며 장비를 추천합니다' },
               { icon: '✅', title: '정품 보장', desc: '모든 입점 브랜드의 정품만을 취급합니다' },
               { icon: '🚚', title: '빠른 배송', desc: '오후 2시 이전 주문 시 당일 출고' },
               { icon: '🔄', title: '무료 교환/반품', desc: '7일 이내 무료 교환 및 반품 가능' },

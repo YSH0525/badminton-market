@@ -59,10 +59,10 @@ export default function AcademyPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl font-black text-gray-900 mb-4">
-                국가대표 출신 코치의<br />체계적인 배드민턴 레슨
+                선수 출신 코치의<br />체계적인 배드민턴 레슨
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                스매시 배드민턴 아카데미는 국가대표 출신 김민수 코치가 직접 운영하는
+                스매시 배드민턴 아카데미는 선수 출신 김민수 코치가 직접 운영하는
                 배드민턴 전문 교육 기관입니다. 입문자부터 대회 준비 선수까지,
                 개인의 수준에 맞는 체계적인 커리큘럼으로 지도합니다.
               </p>
