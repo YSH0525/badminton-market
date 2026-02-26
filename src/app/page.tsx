@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroBanner from '@/components/HeroBanner';
 import { products } from '@/data/products';
 import { academyClasses } from '@/data/academy';
@@ -77,10 +78,16 @@ export default function Home() {
                 쇼핑하기
               </Link>
             </div>
-            <div className="flex items-center justify-center">
-              <div className="text-center p-12 border-2 border-dashed border-gray-700 rounded-lg">
-                <span className="text-8xl block mb-4">🎯</span>
-                <p className="text-gray-500 text-sm">전문 코치의 장비 추천</p>
+            <div className="relative aspect-video rounded-lg overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1559312001-f402e13b2cc6?w=800&h=450&fit=crop&q=80"
+                alt="배드민턴 선수"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <p className="text-white text-sm font-bold">전문 코치의 장비 추천</p>
               </div>
             </div>
           </div>
@@ -119,12 +126,24 @@ export default function Home() {
             {academyClasses.slice(0, 3).map((cls) => (
               <Link href="/academy" key={cls.id} className="group">
                 <div className="bg-gray-50 border border-gray-100 hover:border-gray-300 transition-all hover:shadow-md">
-                  <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                    <div className="text-center">
-                      <span className="text-4xl block mb-2">
-                        {cls.level === 'beginner' ? '🌱' : cls.level === 'intermediate' ? '🔥' : '🏆'}
+                  <div className="relative aspect-video overflow-hidden">
+                    {cls.image ? (
+                      <Image
+                        src={cls.image}
+                        alt={cls.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                        <span className="text-4xl">🏸</span>
+                      </div>
+                    )}
+                    <div className="absolute top-3 left-3 z-10">
+                      <span className="bg-black/70 text-white text-xs font-bold px-2 py-1 uppercase">
+                        {cls.level}
                       </span>
-                      <span className="text-xs font-bold text-gray-400 tracking-wider uppercase">{cls.level}</span>
                     </div>
                   </div>
                   <div className="p-5">
@@ -155,8 +174,20 @@ export default function Home() {
             {featuredVendors.map((vendor) => (
               <Link href="/vendors" key={vendor.id} className="group">
                 <div className="bg-white border border-gray-100 p-6 text-center hover:border-gray-300 hover:shadow-md transition-all">
-                  <div className="w-16 h-16 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl group-hover:bg-[#c8ff00]/10 transition-colors">
-                    {vendor.name.charAt(0)}
+                  <div className="relative w-16 h-16 rounded-full mx-auto mb-4 overflow-hidden bg-gray-100 group-hover:ring-2 group-hover:ring-[#c8ff00]/50 transition-all">
+                    {vendor.logo ? (
+                      <Image
+                        src={vendor.logo}
+                        alt={vendor.name}
+                        fill
+                        className="object-cover"
+                        sizes="64px"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-2xl">
+                        {vendor.name.charAt(0)}
+                      </div>
+                    )}
                   </div>
                   <h3 className="font-bold text-sm text-gray-900 mb-1">{vendor.name}</h3>
                   <p className="text-xs text-gray-400">상품 {vendor.productCount}개</p>

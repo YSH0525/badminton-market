@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { academyClasses, coaches } from '@/data/academy';
 
 export default function AcademyPage() {
@@ -81,11 +82,19 @@ export default function AcademyPage() {
                 </div>
               </div>
             </div>
-            <div className="bg-gray-50 aspect-video flex items-center justify-center rounded-lg">
-              <div className="text-center">
-                <span className="text-7xl block mb-4">🏟️</span>
-                <p className="text-sm text-gray-400">스매시 배드민턴 아카데미</p>
-                <p className="text-xs text-gray-400">서울 강남구</p>
+            <div className="relative aspect-video rounded-lg overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1515128926115-1da1b3c702c9?w=800&h=450&fit=crop&q=80"
+                alt="배드민턴 코트"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">
+                <div>
+                  <p className="text-white text-sm font-bold">스매시 배드민턴 아카데미</p>
+                  <p className="text-white/70 text-xs">서울 강남구</p>
+                </div>
               </div>
             </div>
           </div>
@@ -102,8 +111,20 @@ export default function AcademyPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {coaches.map((coach) => (
               <div key={coach.name} className="bg-white p-6 border border-gray-100">
-                <div className="w-20 h-20 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
-                  👤
+                <div className="relative w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden bg-gray-100">
+                  {coach.image ? (
+                    <Image
+                      src={coach.image}
+                      alt={coach.name}
+                      fill
+                      className="object-cover"
+                      sizes="80px"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-3xl">
+                      👤
+                    </div>
+                  )}
                 </div>
                 <div className="text-center mb-4">
                   <h3 className="font-black text-lg text-gray-900">{coach.name}</h3>

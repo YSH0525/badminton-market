@@ -5,7 +5,7 @@ export const academyClasses: AcademyClass[] = [
     id: 'class-001',
     title: '입문자를 위한 배드민턴 기초반',
     coach: '김민수 코치',
-    coachImage: '',
+    coachImage: 'https://images.unsplash.com/photo-1664478290803-736eddf6abb2?w=200&h=200&fit=crop&q=80',
     level: 'beginner',
     description: '배드민턴을 처음 시작하는 분들을 위한 기초 클래스입니다. 올바른 그립법, 기본 스트로크, 서비스, 풋워크의 기본을 배울 수 있습니다. 누구나 쉽게 따라올 수 있도록 친절하게 지도합니다.',
     schedule: '매주 월/수/금 19:00 - 20:30',
@@ -14,13 +14,13 @@ export const academyClasses: AcademyClass[] = [
     currentStudents: 8,
     price: 250000,
     location: '스매시 배드민턴 아카데미 (서울 강남구)',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1677543938193-6050960bef16?w=800&h=450&fit=crop&q=80',
   },
   {
     id: 'class-002',
     title: '실력 향상 중급반',
     coach: '김민수 코치',
-    coachImage: '',
+    coachImage: 'https://images.unsplash.com/photo-1664478290803-736eddf6abb2?w=200&h=200&fit=crop&q=80',
     level: 'intermediate',
     description: '기본기를 갖춘 동호인을 위한 중급 클래스입니다. 다양한 클리어, 드롭, 스매시 기술과 복식 전략, 경기 운영법을 배울 수 있습니다. 실전 게임을 통해 배운 기술을 적용해봅니다.',
     schedule: '매주 화/목 19:00 - 21:00',
@@ -29,13 +29,13 @@ export const academyClasses: AcademyClass[] = [
     currentStudents: 7,
     price: 300000,
     location: '스매시 배드민턴 아카데미 (서울 강남구)',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1664304753883-923c28de6b85?w=800&h=450&fit=crop&q=80',
   },
   {
     id: 'class-003',
     title: '대회 준비 상급반',
     coach: '박지현 코치',
-    coachImage: '',
+    coachImage: 'https://images.unsplash.com/photo-1661580282598-6883482b4c8e?w=200&h=200&fit=crop&q=80',
     level: 'advanced',
     description: '대회 출전을 목표로 하는 상급자를 위한 클래스입니다. 고급 기술 훈련, 전술 분석, 체력 훈련, 멘탈 관리까지 종합적인 선수 트레이닝을 제공합니다. 선수 출신 코치가 직접 지도합니다.',
     schedule: '매주 월/수/금/토 18:00 - 20:00',
@@ -44,13 +44,13 @@ export const academyClasses: AcademyClass[] = [
     currentStudents: 5,
     price: 500000,
     location: '스매시 배드민턴 아카데미 (서울 강남구)',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1559312001-f402e13b2cc6?w=800&h=450&fit=crop&q=80',
   },
   {
     id: 'class-004',
     title: '주니어 배드민턴 교실',
     coach: '이서연 코치',
-    coachImage: '',
+    coachImage: 'https://images.unsplash.com/photo-1661963076937-05224b778d98?w=200&h=200&fit=crop&q=80',
     level: 'beginner',
     description: '초등학생~중학생을 대상으로 한 주니어 배드민턴 교실입니다. 재미있는 게임과 훈련을 통해 배드민턴의 즐거움을 알려줍니다. 체력 향상과 사회성 발달에도 도움이 됩니다.',
     schedule: '매주 토/일 10:00 - 12:00',
@@ -59,13 +59,13 @@ export const academyClasses: AcademyClass[] = [
     currentStudents: 12,
     price: 200000,
     location: '스매시 배드민턴 아카데미 (서울 강남구)',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1515128926115-1da1b3c702c9?w=800&h=450&fit=crop&q=80',
   },
   {
     id: 'class-005',
     title: '1:1 프라이빗 레슨',
     coach: '김민수 코치',
-    coachImage: '',
+    coachImage: 'https://images.unsplash.com/photo-1664478290803-736eddf6abb2?w=200&h=200&fit=crop&q=80',
     level: 'all',
     description: '개인의 수준과 목표에 맞춘 1:1 맞춤형 레슨입니다. 영상 분석을 통한 폼 교정, 약점 보완, 특화 기술 훈련 등 집중적인 지도를 받을 수 있습니다. 예약제로 운영됩니다.',
     schedule: '시간 협의 (예약제)',
@@ -74,7 +74,7 @@ export const academyClasses: AcademyClass[] = [
     currentStudents: 0,
     price: 80000,
     location: '스매시 배드민턴 아카데미 (서울 강남구)',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1708312604109-16c0be9326cd?w=800&h=450&fit=crop&q=80',
   },
 ];
 
@@ -82,6 +82,7 @@ export const coaches = [
   {
     name: '김민수',
     title: '원장 / 수석 코치',
+    image: 'https://images.unsplash.com/photo-1664478290803-736eddf6abb2?w=300&h=300&fit=crop&q=80',
     career: [
       '전 실업팀 배드민턴 선수',
       '전국동호인대회 다수 입상',
@@ -94,6 +95,7 @@ export const coaches = [
   {
     name: '박지현',
     title: '상급반 담당 코치',
+    image: 'https://images.unsplash.com/photo-1661580282598-6883482b4c8e?w=300&h=300&fit=crop&q=80',
     career: [
       '전 실업팀 여자 단식 선수',
       '전국체전 입상 경력',
@@ -105,6 +107,7 @@ export const coaches = [
   {
     name: '이서연',
     title: '주니어반 담당 코치',
+    image: 'https://images.unsplash.com/photo-1661963076937-05224b778d98?w=300&h=300&fit=crop&q=80',
     career: [
       '전 실업팀 배드민턴 선수',
       '유소년 스포츠 지도자 자격증',
