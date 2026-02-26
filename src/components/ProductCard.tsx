@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Product } from '@/types';
 import { useCart } from './CartProvider';
 
@@ -11,26 +12,26 @@ export default function ProductCard({ product }: { product: Product }) {
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0;
 
-  const categoryIcons: Record<string, string> = {
-    racket: '🏸',
-    shoes: '👟',
-    shuttlecock: '🪶',
-    bag: '🎒',
-    apparel: '👕',
-    accessory: '🔧',
-    string: '🧵',
-  };
-
   return (
     <div className="group bg-white border border-gray-100 hover:border-gray-300 transition-all duration-300 hover:shadow-lg">
       {/* Image Area */}
       <Link href={`/products/${product.id}`}>
-        <div className="relative aspect-square bg-gray-50 flex items-center justify-center overflow-hidden">
-          <span className="text-6xl group-hover:scale-110 transition-transform duration-300">
-            {categoryIcons[product.category] || '🏸'}
-          </span>
+        <div className="relative aspect-square bg-gray-50 overflow-hidden">
+          {product.image ? (
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 768px) 50vw, 25vw"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="text-6xl">🏸</span>
+            </div>
+          )}
           {/* Tags */}
-          <div className="absolute top-3 left-3 flex flex-col gap-1">
+          <div className="absolute top-3 left-3 flex flex-col gap-1 z-10">
             {discount > 0 && (
               <span className="bg-red-500 text-white text-xs font-bold px-2 py-1">
                 -{discount}%

@@ -2,6 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { products } from '@/data/products';
 import { useCart } from '@/components/CartProvider';
 import { useState } from 'react';
@@ -26,16 +27,6 @@ export default function ProductDetailPage() {
       </div>
     );
   }
-
-  const categoryIcons: Record<string, string> = {
-    racket: '🏸',
-    shoes: '👟',
-    shuttlecock: '🪶',
-    bag: '🎒',
-    apparel: '👕',
-    accessory: '🔧',
-    string: '🧵',
-  };
 
   const discount = product.originalPrice
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
@@ -68,19 +59,28 @@ export default function ProductDetailPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
           {/* Left - Image */}
-          <div className="bg-gray-50 aspect-square flex items-center justify-center sticky top-20">
-            <div className="text-center">
-              <span className="text-[120px] md:text-[160px]">
-                {categoryIcons[product.category] || '🏸'}
-              </span>
-              {discount > 0 && (
-                <div className="absolute top-4 left-4">
-                  <span className="bg-red-500 text-white text-sm font-bold px-3 py-1">
-                    -{discount}%
-                  </span>
-                </div>
-              )}
-            </div>
+          <div className="relative bg-gray-50 aspect-square sticky top-20 overflow-hidden">
+            {product.image ? (
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center">
+                <span className="text-[120px] md:text-[160px]">🏸</span>
+              </div>
+            )}
+            {discount > 0 && (
+              <div className="absolute top-4 left-4 z-10">
+                <span className="bg-red-500 text-white text-sm font-bold px-3 py-1">
+                  -{discount}%
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Right - Info */}
@@ -240,10 +240,20 @@ export default function ProductDetailPage() {
                   : 0;
                 return (
                   <Link key={p.id} href={`/products/${p.id}`} className="group">
-                    <div className="bg-gray-50 aspect-square flex items-center justify-center mb-3">
-                      <span className="text-5xl group-hover:scale-110 transition-transform">
-                        {categoryIcons[p.category] || '🏸'}
-                      </span>
+                    <div className="relative bg-gray-50 aspect-square mb-3 overflow-hidden">
+                      {p.image ? (
+                        <Image
+                          src={p.image}
+                          alt={p.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform"
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <span className="text-5xl">🏸</span>
+                        </div>
+                      )}
                     </div>
                     <p className="text-xs text-gray-400 font-medium">{p.brand}</p>
                     <h3 className="text-sm font-bold text-gray-900 mb-1">{p.name}</h3>

@@ -1,8 +1,19 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HeroBanner() {
   return (
     <section className="relative bg-black text-white overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1677543938193-6050960bef16?w=1920&h=900&fit=crop&q=80"
+          alt="Badminton court"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
+      </div>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-72 h-72 border border-white rounded-full" />
@@ -46,11 +57,17 @@ export default function HeroBanner() {
           {/* Right - Visual */}
           <div className="relative z-10 flex items-center justify-center">
             <div className="relative">
-              {/* Decorative circles */}
+              {/* Decorative circles with racket image */}
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full border-2 border-[#c8ff00]/30 flex items-center justify-center">
                 <div className="w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full border-2 border-[#c8ff00]/50 flex items-center justify-center">
-                  <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-[#c8ff00]/10 flex items-center justify-center">
-                    <span className="text-7xl md:text-8xl lg:text-9xl">🏸</span>
+                  <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-[#c8ff00]/10 overflow-hidden">
+                    <Image
+                      src="https://images.unsplash.com/photo-1564227050211-b6061acd4158?w=400&h=400&fit=crop&q=80"
+                      alt="Badminton racket"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
                   </div>
                 </div>
               </div>

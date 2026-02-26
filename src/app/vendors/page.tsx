@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { vendors } from '@/data/vendors';
 import { products } from '@/data/products';
 
@@ -48,8 +49,20 @@ export default function VendorsPage() {
                 <div className="p-6 sm:p-8">
                   <div className="flex flex-col sm:flex-row sm:items-start gap-6">
                     {/* Vendor Logo */}
-                    <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center text-3xl font-black text-gray-400 shrink-0">
-                      {vendor.name.charAt(0)}
+                    <div className="relative w-20 h-20 bg-gray-100 rounded-lg overflow-hidden shrink-0">
+                      {vendor.logo ? (
+                        <Image
+                          src={vendor.logo}
+                          alt={vendor.name}
+                          fill
+                          className="object-cover"
+                          sizes="80px"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-3xl font-black text-gray-400">
+                          {vendor.name.charAt(0)}
+                        </div>
+                      )}
                     </div>
 
                     {/* Vendor Info */}
@@ -101,15 +114,20 @@ export default function VendorsPage() {
                       <div className="grid grid-cols-3 gap-3">
                         {vendorProducts.map((p) => (
                           <Link key={p.id} href={`/products/${p.id}`} className="group">
-                            <div className="bg-gray-50 aspect-square flex items-center justify-center mb-2 group-hover:bg-gray-100 transition-colors">
-                              <span className="text-3xl">{
-                                p.category === 'racket' ? '🏸' :
-                                p.category === 'shoes' ? '👟' :
-                                p.category === 'shuttlecock' ? '🪶' :
-                                p.category === 'bag' ? '🎒' :
-                                p.category === 'apparel' ? '👕' :
-                                p.category === 'string' ? '🧵' : '🔧'
-                              }</span>
+                            <div className="relative bg-gray-50 aspect-square mb-2 overflow-hidden group-hover:bg-gray-100 transition-colors">
+                              {p.image ? (
+                                <Image
+                                  src={p.image}
+                                  alt={p.name}
+                                  fill
+                                  className="object-cover group-hover:scale-105 transition-transform"
+                                  sizes="(max-width: 768px) 33vw, 20vw"
+                                />
+                              ) : (
+                                <div className="w-full h-full flex items-center justify-center">
+                                  <span className="text-3xl">🏸</span>
+                                </div>
+                              )}
                             </div>
                             <p className="text-xs font-bold text-gray-900 truncate">{p.name}</p>
                             <p className="text-xs text-gray-500">{p.price.toLocaleString()}원</p>

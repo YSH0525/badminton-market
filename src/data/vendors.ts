@@ -4,7 +4,7 @@ export const vendors: Vendor[] = [
   {
     id: 'vendor-001',
     name: 'YONEX 공식스토어',
-    logo: '',
+    logo: 'https://images.unsplash.com/photo-1564227050211-b6061acd4158?w=200&h=200&fit=crop&q=80',
     description: '세계 최고의 배드민턴 브랜드 요넥스의 공식 온라인 스토어입니다. 라켓, 신발, 의류, 악세서리까지 다양한 배드민턴 용품을 정품으로 만나보세요.',
     category: '종합 배드민턴 용품',
     productCount: 156,
@@ -15,7 +15,7 @@ export const vendors: Vendor[] = [
   {
     id: 'vendor-002',
     name: 'Li-Ning 코리아',
-    logo: '',
+    logo: 'https://images.unsplash.com/photo-1721760886982-3c643f05813d?w=200&h=200&fit=crop&q=80',
     description: '중국 프리미엄 스포츠 브랜드 리닝의 공식 한국 파트너입니다. 세계 챔피언들이 사용하는 고급 라켓과 장비를 제공합니다.',
     category: '프리미엄 라켓 전문',
     productCount: 89,
@@ -26,7 +26,7 @@ export const vendors: Vendor[] = [
   {
     id: 'vendor-003',
     name: 'Victor 스포츠',
-    logo: '',
+    logo: 'https://images.unsplash.com/photo-1564227122460-9e131708b3a6?w=200&h=200&fit=crop&q=80',
     description: '대만 배드민턴 전문 브랜드 빅터입니다. 뛰어난 가성비와 프로급 성능을 겸비한 제품들을 만나보실 수 있습니다.',
     category: '배드민턴 종합',
     productCount: 112,
@@ -37,7 +37,7 @@ export const vendors: Vendor[] = [
   {
     id: 'vendor-004',
     name: '배드민턴 마켓',
-    logo: '',
+    logo: 'https://images.unsplash.com/photo-1682435566673-cedb75cd7459?w=200&h=200&fit=crop&q=80',
     description: '다양한 배드민턴 소품과 악세서리를 전문으로 취급하는 온라인 스토어입니다. 그립, 스트링, 가방 등 필수 소모품을 합리적인 가격에 제공합니다.',
     category: '소품/악세서리 전문',
     productCount: 234,
@@ -48,7 +48,7 @@ export const vendors: Vendor[] = [
   {
     id: 'vendor-005',
     name: '스매시 프로샵',
-    logo: '',
+    logo: 'https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?w=200&h=200&fit=crop&q=80',
     description: '전문 코치가 직접 선별한 맞춤 장비를 추천하는 프로샵입니다. 라켓 커스터마이징 및 스트링 서비스도 제공합니다.',
     category: '커스터마이징/프로샵',
     productCount: 67,

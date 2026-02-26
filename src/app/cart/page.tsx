@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useCart } from '@/components/CartProvider';
 import { useState } from 'react';
 
@@ -10,16 +11,6 @@ export default function CartPage() {
 
   const shippingFee = totalPrice >= 50000 ? 0 : 3000;
   const finalTotal = totalPrice + shippingFee;
-
-  const categoryIcons: Record<string, string> = {
-    racket: '🏸',
-    shoes: '👟',
-    shuttlecock: '🪶',
-    bag: '🎒',
-    apparel: '👕',
-    accessory: '🔧',
-    string: '🧵',
-  };
 
   if (orderPlaced) {
     return (
@@ -86,10 +77,20 @@ export default function CartPage() {
             {items.map((item) => (
               <div key={item.product.id} className="bg-white p-4 sm:p-6 flex gap-4 sm:gap-6">
                 {/* Image */}
-                <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gray-50 flex items-center justify-center shrink-0">
-                  <span className="text-4xl sm:text-5xl">
-                    {categoryIcons[item.product.category] || '🏸'}
-                  </span>
+                <div className="relative w-24 h-24 sm:w-32 sm:h-32 bg-gray-50 shrink-0 overflow-hidden">
+                  {item.product.image ? (
+                    <Image
+                      src={item.product.image}
+                      alt={item.product.name}
+                      fill
+                      className="object-cover"
+                      sizes="128px"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-4xl sm:text-5xl">🏸</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Info */}

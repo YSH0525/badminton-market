@@ -8,8 +8,11 @@ export const products: Product[] = [
     category: 'racket',
     price: 359000,
     originalPrice: 399000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1564227050211-b6061acd4158?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1564227050211-b6061acd4158?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1708312604109-16c0be9326cd?w=800&h=800&fit=crop&q=80',
+    ],
     description: '공격적인 스매싱을 위한 최상급 라켓. 로테이셔널 제너레이터 시스템으로 강력한 연속 스매시가 가능합니다. 프로 선수들이 사용하는 최상위 모델입니다.',
     specs: {
       '무게': '4U (83g)',
@@ -33,8 +36,11 @@ export const products: Product[] = [
     category: 'racket',
     price: 289000,
     originalPrice: 329000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1722003180803-577efd6d2ecc?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1722003180803-577efd6d2ecc?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1564227050211-b6061acd4158?w=800&h=800&fit=crop&q=80',
+    ],
     description: '빠른 스윙 스피드를 위한 경량 라켓. 소닉 플레어 시스템으로 빠른 리턴과 드라이브에 최적화되었습니다.',
     specs: {
       '무게': '4U (83g)',
@@ -57,8 +63,11 @@ export const products: Product[] = [
     brand: 'Li-Ning',
     category: 'racket',
     price: 279000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1721760886982-3c643f05813d?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1721760886982-3c643f05813d?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1708312604109-16c0be9326cd?w=800&h=800&fit=crop&q=80',
+    ],
     description: '리닝의 최상위 공격형 라켓. 에어스트림 채널 기술로 공기저항을 최소화하여 빠르고 강력한 스매시를 구현합니다.',
     specs: {
       '무게': '3U (87g)',
@@ -82,8 +91,11 @@ export const products: Product[] = [
     category: 'shoes',
     price: 189000,
     originalPrice: 219000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1673458333538-e6ecf39975ce?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1673458333538-e6ecf39975ce?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1663127624629-232ce5a34e00?w=800&h=800&fit=crop&q=80',
+    ],
     description: '파워 쿠션 기술로 충격 흡수와 반발력을 동시에 제공하는 배드민턴 전용 신발. 넓은 발볼 디자인으로 편안한 착화감을 제공합니다.',
     specs: {
       '사이즈': '230-300mm',
@@ -105,8 +117,11 @@ export const products: Product[] = [
     brand: 'Victor',
     category: 'shoes',
     price: 159000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1682435561654-20d84cef00eb?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1682435561654-20d84cef00eb?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1673458333538-e6ecf39975ce?w=800&h=800&fit=crop&q=80',
+    ],
     description: '빅터의 코트용 배드민턴화. 경량 설계와 뛰어난 그립력으로 빠른 발놀림을 지원합니다.',
     specs: {
       '사이즈': '230-290mm',
@@ -128,8 +143,11 @@ export const products: Product[] = [
     brand: 'YONEX',
     category: 'shuttlecock',
     price: 42000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1564226803380-91139fdcb4d0?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1564226803380-91139fdcb4d0?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1542308743-d21b236ab3f0?w=800&h=800&fit=crop&q=80',
+    ],
     description: '국제대회 공인구. 최상급 거위 깃털을 사용하여 안정적인 비행과 뛰어난 내구성을 제공합니다. 1통 12개입.',
     specs: {
       '깃털': '거위 깃털',
@@ -150,8 +168,11 @@ export const products: Product[] = [
     brand: 'Victor',
     category: 'shuttlecock',
     price: 32000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1542308743-d21b236ab3f0?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1542308743-d21b236ab3f0?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?w=800&h=800&fit=crop&q=80',
+    ],
     description: '빅터 토너먼트용 셔틀콕. 엄선된 거위 깃털로 대회 수준의 비행 성능을 합리적인 가격에 제공합니다. 1통 12개입.',
     specs: {
       '깃털': '거위 깃털',
@@ -173,8 +194,11 @@ export const products: Product[] = [
     category: 'bag',
     price: 159000,
     originalPrice: 189000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1671028547420-a541b5a1243e?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1671028547420-a541b5a1243e?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1714573003538-19a36d1d27ed?w=800&h=800&fit=crop&q=80',
+    ],
     description: '프로 토너먼트용 라켓백. 최대 6개의 라켓 수납이 가능하며 신발칸, 소품 포켓 등 다양한 수납공간을 제공합니다.',
     specs: {
       '수납': '라켓 6개',
@@ -195,8 +219,11 @@ export const products: Product[] = [
     brand: 'YONEX',
     category: 'apparel',
     price: 79000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1664885647983-772bde237f43?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1664885647983-772bde237f43?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1661963076937-05224b778d98?w=800&h=800&fit=crop&q=80',
+    ],
     description: '통기성이 뛰어난 배드민턴 전용 유니폼. 땀 흡수가 빠르고 가벼워 경기 중 최상의 퍼포먼스를 발휘할 수 있습니다.',
     specs: {
       '사이즈': 'S / M / L / XL / XXL',
@@ -216,8 +243,10 @@ export const products: Product[] = [
     brand: 'YONEX',
     category: 'string',
     price: 18000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1723867379328-6497df2470e4?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1723867379328-6497df2470e4?w=800&h=800&fit=crop&q=80',
+    ],
     description: '강력한 반발력과 타구감을 제공하는 배드민턴 스트링. 공격적인 플레이어에게 최적화된 고반발 스트링입니다.',
     specs: {
       '게이지': '0.68mm',
@@ -239,8 +268,10 @@ export const products: Product[] = [
     brand: 'YONEX',
     category: 'accessory',
     price: 8000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1661863169689-29ea9d0a17f2?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1661863169689-29ea9d0a17f2?w=800&h=800&fit=crop&q=80',
+    ],
     description: '땀 흡수력이 뛰어난 오버그립. 미끄러짐 방지와 편안한 그립감을 제공합니다.',
     specs: {
       '수량': '3개입',
@@ -260,8 +291,11 @@ export const products: Product[] = [
     brand: 'Victor',
     category: 'racket',
     price: 249000,
-    image: '',
-    images: [],
+    image: 'https://images.unsplash.com/photo-1564227122460-9e131708b3a6?w=600&h=600&fit=crop&q=80',
+    images: [
+      'https://images.unsplash.com/photo-1564227122460-9e131708b3a6?w=800&h=800&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1721760886713-1ab0c5045bf7?w=800&h=800&fit=crop&q=80',
+    ],
     description: '빅터의 올라운드형 라켓. 공수 전환이 빠르며 중급에서 상급 플레이어까지 폭넓게 사용할 수 있는 라켓입니다.',
     specs: {
       '무게': '4U (83g)',
