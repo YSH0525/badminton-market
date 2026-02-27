@@ -37,7 +37,7 @@ export const vendors: Vendor[] = [
   {
     id: 'vendor-004',
     name: '배드민턴 마켓',
-    logo: 'https://images.unsplash.com/photo-1682435566673-cedb75cd7459?w=200&h=200&fit=crop&q=80',
+    logo: 'https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=200&h=200&fit=crop&q=80',
     description: '다양한 배드민턴 소품과 악세서리를 전문으로 취급하는 온라인 스토어입니다. 그립, 스트링, 가방 등 필수 소모품을 합리적인 가격에 제공합니다.',
     category: '소품/악세서리 전문',
     productCount: 234,

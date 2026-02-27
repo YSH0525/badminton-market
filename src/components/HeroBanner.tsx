@@ -7,7 +7,7 @@ export default function HeroBanner() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1677543938193-6050960bef16?w=1920&h=900&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=1920&h=900&fit=crop&q=80"
           alt="Badminton court"
           fill
           className="object-cover opacity-30"
