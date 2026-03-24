@@ -49,6 +49,9 @@ export default function Header() {
             <Link href="/vendors/apply" className="text-sm font-medium hover:text-[#c8ff00] transition-colors tracking-wide">
               입점신청
             </Link>
+            <Link href="/docs" className="text-sm font-medium hover:text-[#c8ff00] transition-colors tracking-wide">
+              자료실
+            </Link>
           </nav>
 
           {/* Right Actions */}
@@ -119,8 +122,11 @@ export default function Header() {
             <Link href="/academy" className="text-sm font-medium hover:text-[#c8ff00] transition-colors py-2 border-b border-gray-800" onClick={() => setMobileMenuOpen(false)}>
               ACADEMY
             </Link>
-            <Link href="/vendors/apply" className="text-sm font-medium hover:text-[#c8ff00] transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/vendors/apply" className="text-sm font-medium hover:text-[#c8ff00] transition-colors py-2 border-b border-gray-800" onClick={() => setMobileMenuOpen(false)}>
               입점신청
+            </Link>
+            <Link href="/docs" className="text-sm font-medium hover:text-[#c8ff00] transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>
+              자료실
             </Link>
           </nav>
         </div>
